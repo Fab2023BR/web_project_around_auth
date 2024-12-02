@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import iconClose from "../images/close-icon.svg";
+import iconClose from "../images/close-icon.png";
 
 export default function ImagePopup({ card, onClose }) {
   const [selectedCard, setSelectedCard] = useState(card);

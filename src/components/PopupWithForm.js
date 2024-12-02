@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import iconClose from "../images/close-icon.svg";
+import iconClose from "../images/close-icon.png";
 import { FormValidator, validateOptions } from "../utils/formValidator";
 
 export default function PopupWithForm({

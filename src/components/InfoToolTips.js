@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import iconClose from "../images/close-icon.svg";
+import iconClose from "../images/close-icon.png";
 import iconSuccess from "../images/success-icon.svg";
 import iconError from "../images/error-icon.svg";
 
