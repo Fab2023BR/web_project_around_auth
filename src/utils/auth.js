@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3000";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "https://se-register-api.en.tripleten-services.com/v1";
 
 export const register = async ({ email, password }) => {
   return fetch(`${BASE_URL}/signup`, {

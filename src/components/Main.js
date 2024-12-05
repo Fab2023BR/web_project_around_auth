@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import imageFallback from "../images/avatar-fallback.png";
 import iconEdit from "../images/edit-icon.png";
-import iconPlus from "../images/plus-icon.png";
+import iconPlus from "../images/plus.icon.png";
 import Card from "./Card";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 

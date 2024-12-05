@@ -14,7 +14,7 @@ import EditAvatarPopup from "./EditAvatarPopup";
 import ConfirmationPopup from "./ConfirmationPopup";
 import AddPlacePopup from "./AddPlacePopup";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import InfoToolTip from "./InfoToolTip";
+import InfoToolTip from "./InfoToolTips";
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
