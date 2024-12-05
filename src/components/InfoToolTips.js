@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import iconClose from "../images/close-icon.png";
-import iconSuccess from "../images/success-icon.svg";
-import iconError from "../images/error-icon.svg";
+import iconSuccess from "../images/popup-vitoria.jpg";
+import iconError from "../images/popup-erro.png";
 
 export default function InfoToolTip({
   isOpen,
