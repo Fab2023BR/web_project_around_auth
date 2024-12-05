@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import iconClose from "../images/close-icon.png";
-import iconSuccess from "../images/popup-vitoria.jpg";
+import iconSuccess from "../images/popup-vitoria.png";
 import iconError from "../images/popup-erro.png";
 
 export default function InfoToolTip({

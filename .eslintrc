@@ -1,27 +1,31 @@
 {
-  "extends": "airbnb-base",
-  "parser": "@babel/eslint-parser",
-  "rules": {
-    "no-console": "off",
-    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
-    "import/extensions": ["off", "always", { "ignorePackages": true }],
-    "import/no-named-as-default": "off",
-    "import/no-named-as-default-member": "off",
-    "no-restricted-syntax": [
-      "off", // Desativa a regra para qualquer tipo de sintaxe restrita
-      {
-        "selector": "ForInStatement",
-        "message": "for..in loops are allowed"
-      }
-    ],
-    "guard-for-in": "off"  // Desativa a exigência de verificação no corpo do for..in
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
-    "ecmaVersion": 2022,
-    "sourceType": "module",
-    "babelOptions": {
-      "plugins": ["@babel/plugin-syntax-import-assertions"]
-    },
-    "requireConfigFile": false
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // Para React 17+
+    "react/prop-types": ["error"],
+    "quotes": ["error", "double"], // Permite double quotes
+    "eol-last": ["off"], // Desativa nova linha obrigatória no final do arquivo
+    "object-curly-newline": ["off"], // Desativa validação de quebras de linha em objetos
+    "no-use-before-define": ["error", { "functions": false }], // Permite o uso de funções antes da definição
+    "comma-dangle": ["error", "never"], // Remove a exigência de vírgulas no final
+    "semi": ["error", "always"] // Garante ponto e vírgula ao final das linhas
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Detecta a versão do React automaticamente
+    }
   }
 }

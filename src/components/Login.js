@@ -33,10 +33,10 @@ function Login({ handleLogin, loggedIn, handleInfoToolTip }) {
       }
 
       const res = await auth.login(user);
-      const { message, token } = await res.json();
+      const {error, token} = await res.json();
 
-      if (message) {
-        throw new Error(message);
+      if (error) {
+        throw new Error(error);
       }
 
       if (token) {
