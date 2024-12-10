@@ -5,8 +5,9 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
   const link = useRef();
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(link.current.value);
     return onUpdateAvatar({
-      avatar: link.current.value,
+      avatar: link.current.value
     });
   }
   return (

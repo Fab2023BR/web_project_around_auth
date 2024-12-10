@@ -12,10 +12,9 @@ export default function Main({
   onCardClick,
   cards,
   onCardLike,
-  onCardDelete,
+  onCardDelete
 }) {
   const currentUser = useContext(CurrentUserContext);
-
   return (
     <>
       <section className="profile">
@@ -62,7 +61,7 @@ export default function Main({
           <ul className="posts__list">
             {cards.map((card) => (
               <Card
-                key={card._id}
+                key={card?._id}
                 card={card}
                 onCardClick={onCardClick}
                 onCardLike={onCardLike}

@@ -7,7 +7,7 @@ class Api {
   _makeRequest(endpoint, method = "GET", body = null) {
     const options = {
       method,
-      headers: { ...this._options.headers },
+      headers: { ...this._options.headers }
     };
 
     if (body) {
@@ -34,7 +34,8 @@ class Api {
   }
 
   changeLikeCardStatus(id, isLiked) {
-    return this._makeRequest(`/cards/${id}/likes/`, isLiked ? "PUT" : "DELETE");
+    console.log(isLiked);
+    return this._makeRequest(`/cards/likes/${id}`, isLiked ? "PUT" : "DELETE");
   }
 
   getUserInfo() {
@@ -56,8 +57,8 @@ const api = (token) =>
   new Api(BASE_URL, {
     headers: {
       Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   });
 
 export default api;

@@ -15,13 +15,13 @@
   "plugins": ["react"],
   "rules": {
     "react/react-in-jsx-scope": "off", // Para React 17+
-    "react/prop-types": ["error"],
     "quotes": ["error", "double"], // Permite double quotes
     "eol-last": ["off"], // Desativa nova linha obrigatória no final do arquivo
     "object-curly-newline": ["off"], // Desativa validação de quebras de linha em objetos
     "no-use-before-define": ["error", { "functions": false }], // Permite o uso de funções antes da definição
     "comma-dangle": ["error", "never"], // Remove a exigência de vírgulas no final
-    "semi": ["error", "always"] // Garante ponto e vírgula ao final das linhas
+    "semi": ["error", "always"], // Garante ponto e vírgula ao final das linhas
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {

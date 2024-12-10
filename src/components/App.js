@@ -25,7 +25,7 @@ function App() {
     type: "",
     message: "",
     isOpen: false,
-    onClose: () => {},
+    onClose: () => {}
   });
 
   const [selectedCard, setSelectedCard] = useState({});
@@ -90,12 +90,11 @@ function App() {
       });
   }, [loggedIn]);
 
-  function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i === currentUser._id);
+  function handleCardLike(card, isLiked) {
 
     api(currentToken)
       .changeLikeCardStatus(card._id, !isLiked)
-      .then(({ data: newCard }) => {
+      .then(({ card: newCard }) => {
         setCards((state) =>
           state.map((c) => (c._id === card._id ? newCard : c))
         );
@@ -132,7 +131,7 @@ function App() {
       type,
       message,
       isOpen: true,
-      onClose: () => {},
+      onClose: () => {}
     };
 
     if (onClose) {
@@ -150,7 +149,7 @@ function App() {
       type: "",
       message: "",
       isOpen: false,
-      onClose: () => {},
+      onClose: () => {}
     });
     setSelectedCard({});
     setSelectedCardDelete({});
@@ -165,13 +164,13 @@ function App() {
       })
       .catch(console.log);
   }
-  function handleUpdateAvatar(user) {
+  function handleUpdateAvatar(avatar) {
     return api(currentToken)
-      .editAvatar({ avatar: user.avatar })
+      .editAvatar({ avatar })
       .then(({ data }) => {
         setCurrentUser({
           ...currentUser,
-          avatar: data.avatar,
+          avatar: data.avatar
         });
         closeAllPopups();
       })

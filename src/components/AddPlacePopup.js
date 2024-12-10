@@ -7,7 +7,7 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlaceSubmit }) {
     const formData = new FormData(form);
     const newPost = {
       name: formData.get("title").toString(),
-      link: formData.get("image").toString(),
+      link: formData.get("image").toString()
     };
 
     return onAddPlaceSubmit(newPost, form);
